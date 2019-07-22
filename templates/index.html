@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Martian Stuff</title>
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>  
+  <link rel="stylesheet" href={{ url_for('static', filename='css/main.css') }}>
+
+
+</head>
+
+<body>
+  <div class='header-container'>
+  	<div class='main-header'>Mission to Mars</div>
+  	<div style="text-align:center;">
+
+    <a class="btn btn-primary text-center" href="/scrape" role="button">Scrape New Data</a>
+		</div>
+
+  		
+  </div>
+  
+  <div class='container news-container'>
+  	<div class="row">
+      <div class="col-md-12">
+				<div class='header'>Latest Mars News</div>
+  			<div class='news-title'>{{mars_news.0.title}}</div>
+  			<div class='news-content'>{{mars_news.0.content}}</div>
+      </div>
+
+      </div>
+    </div>
+  	
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-7 ming-featured-image">
+				<div class='header'>Featured Mars Image</div>
+				<img src={{featured_image_url}} style="max-width:100%;
+max-height:100%;
+">
+      </div>
+      <div class="col-md-5">
+      	<div class='weather-container'>
+      		<div class='header'>Current Weather on Mars</div>
+      		<div>{{mars_weather}}</div>
+      	</div>
+
+      	<div class='header'>Mars Facts</div>
+      	{% for k, v in mars_facts.0.items() %}
+          <div>{{ k }} {{v}}</div>
+        {% endfor %} 
+      </div>
+    </div>
+  </div>
+
+
+  <div class="container hemi-pics-container">
+
+		<div class='hemi-header' style='text-align:center'>Mars Hemispheres</div>
+	    <div class="row">
+
+	    	{% for hemi in hemisphere_image_urls %}
+          <div class="col-md-6">
+
+          	<div class="hemi-title">{{hemi.title}}</div>
+	      		<img src={{hemi.img_url}} class="img-fit hemi-pic">
+
+	      	</div>
+        {% endfor %} 
+
+
+
+	    </div>
+	  </div>
+
+</body>
+
+</html>

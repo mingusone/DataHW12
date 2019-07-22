@@ -1,0 +1,62 @@
+body {
+	background-image: url('http://www.magicunicorntears.com/images/unicorn-large.png')
+}
+
+.main-header {
+	font-size: 3.5em;
+	font-weight: bold;
+	text-align: center;
+	
+}
+
+.header {
+	font-size: 2em;
+	font-weight: bold;
+}
+
+.hemi-header {
+	font-size: 2em;
+	margin-bottom: 2em;
+	font-weight: bold;
+}
+
+.header-container {
+	background-color: #f0eae9;
+	padding: 2em;
+	padding-bottom: 3em;
+	margin-bottom: 2em;
+}
+
+.news {
+	font-size: 2em;
+}
+
+.ming-featured-image {
+	padding-right:4em;
+}
+
+.img-fit {
+	max-width:100%;
+	max-height:100%;
+}
+
+.hemi-pics-container {
+	margin-top: 5em;
+}
+
+.hemi-pic {
+	padding:3em;
+}
+
+.hemi-title{
+	text-align: center;
+	font-size: 1.5em;
+}
+
+.news-container{
+	margin-bottom: 3em;
+}
+
+.weather-container {
+	margin-bottom: 3em;
+}

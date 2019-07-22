@@ -1,0 +1,22 @@
+{'_id': ObjectId('5d34fc3d7ac41d4388b42ab2'), 
+
+'mars_news': [{'title': "NASA's Curiosity Mars Rover Finds a Clay Cache", 'content': 'The rover recently drilled two samples, and both showed the highest levels of clay ever found during the mission.'}, {'title': 'Why This Martian Full Moon Looks Like Candy', 'content': "For the first time, NASA's Mars Odyssey orbiter has caught the Martian moon Phobos during a full moon phase. Each color in this new image represents a temperature range detected by Odyssey's infrared camera."}, {'title': 'NASA Garners 7 Webby Award Nominations', 'content': 'Nominees include four JPL projects: the solar system and climate websites, InSight social media, and a 360-degree Earth video. Public voting closes April 18, 2019.'}, {'title': "NASA's Opportunity Rover Mission on Mars Comes to End", 'content': "NASA's Opportunity Mars rover mission is complete after 15 years on Mars. Opportunity's record-breaking exploration laid the groundwork for future missions to the Red Planet."}, {'title': "NASA's InSight Places First Instrument on Mars", 'content': 'In deploying its first instrument onto the surface of Mars, the lander completes a major mission milestone.'}, {'title': 'NASA Announces Landing Site for Mars 2020 Rover', 'content': 'After a five-year search, NASA has chosen Jezero Crater as the landing site for its upcoming Mars 2020 rover mission.'}], 
+
+'featured_image_url': 'https://www.jpl.nasa.gov/spaceimages/images/largesize/PIA18273_hires.jpg', 
+
+'mars_weather': 'InSight sol 229 (2019-07-19) low -99.2ºC (-146.6ºF) high -24.7ºC (-12.4ºF)\nwinds from the SW at 4.0 m/s (9.0 mph) gusting to 14.8 m/s (33.0 mph)\npressure at 7.60 hPa', 
+
+'mars_facts': [
+
+{'Equatorial Diameter:': '6,792 km', 'Polar Diameter:': '6,752 km', 'Mass:': '6.39 × 10^23 kg (0.11 Earths)', 'Moons:': '2 (Phobos & Deimos)', 'Orbit Distance:': '227,943,824 km (1.38 AU)', 'Orbit Period:': '687 days (1.9 years)', 'Surface Temperature:': '-87 to -5 °C', 'First Record:': '2nd millennium BC', 'Recorded By:': 'Egyptian astronomers'}
+
+], 
+
+'hemisphere_image_urls': [
+
+{'title': 'Cerberus Hemisphere Enhanced', 'img_url': 'http://astropedia.astrogeology.usgs.gov/download/Mars/Viking/cerberus_enhanced.tif/full.jpg'}, {'title': 'Schiaparelli Hemisphere Enhanced', 'img_url': 'http://astropedia.astrogeology.usgs.gov/download/Mars/Viking/schiaparelli_enhanced.tif/full.jpg'}, {'title': 'Syrtis Major Hemisphere Enhanced', 'img_url': 'http://astropedia.astrogeology.usgs.gov/download/Mars/Viking/syrtis_major_enhanced.tif/full.jpg'}, {'title': 'Valles Marineris Hemisphere Enhanced', 'img_url': 'http://astropedia.astrogeology.usgs.gov/download/Mars/Viking/valles_marineris_enhanced.tif/full.jpg'}
+
+]
+
+
+}
