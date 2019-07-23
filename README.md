@@ -5,7 +5,7 @@ mongod
 
 #Then run the flask server
 ```
-main.py
+python main.py
 ```
 #Then go into browser and type in the url
 ```
