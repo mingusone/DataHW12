@@ -14,30 +14,38 @@ app = Flask(__name__)
 def home():
 	db = client.mars
 	data = db.mars.find_one()
-	print("(============/LOADING(============/")
-	print(data['mars_facts'][0]['Equatorial Diameter:'])
-	return render_template("index.html", **data)
+	#If there is no data that has been scraped before
+	if data is None:
+		#Do scraping stuf exactly as if you had been scraping.
+		db = client.mars
+		db.mars.drop()
+		martian_stuff = scrape()
+		db.mars.insert(martian_stuff)
+		#it takes a while for mongo to update so just keep checking until it is. 
+		while data is None:
+			data = db.mars.find_one()
+		return render_template("index.html", **data)
+	else:
+		return render_template("index.html", **data)
+
 
 @app.route("/scrape")
 def scrape_route():
-	debugging_scrape_template = False
-	if not debugging_scrape_template:
-		print("============/scrape route hit")
-		db = client.mars
-
-		print("============/Dropping old collection of Mars")
-		db.mars.drop()
-		print("============/Scraping the new stuff")
-		martian_stuff = scrape()
-
-		print("============/Scraped new stuff.")
-		print(martian_stuff)
-
-
-		print("============/Updating mongodb")
-		
-		db.mars.insert(martian_stuff)
-	return render_template("scrape.html")
+	db = client.mars
+	db.mars.drop()
+	martian_stuff = scrape()
+	db.mars.insert(martian_stuff)
+	#what if we don't use scraping index? And just reload main page? 
+	#Removed old scrape.html stuff
+	#A bit of repetitive code here with the thing above. Not enough times to worth refactor. 
+	data = db.mars.find_one()
+	if data is None:
+		while data is None:
+			data = db.mars.find_one()
+		return render_template("index.html", **data)
+	else:
+		return render_template("index.html", **data)
+	return render_template("index.html", **data)
 
 
 
